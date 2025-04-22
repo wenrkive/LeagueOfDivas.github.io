@@ -1,0 +1,63 @@
+footer {
+    margin-top: 20px; /* Espaçamento acima do footer */
+    background-color: #47013c85; /* Cor de fundo do footer */
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .footer-logo {
+    max-width: 80px; /* Ajuste o tamanho do PNG */
+    margin-bottom: 15px;
+  }
+  
+  .social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espaçamento entre os botões */
+    margin-top: 20px;
+  }
+  
+  .social-buttons button {
+    background-color: #47013c; /* Cor de fundo */
+    color: #ffffff; /* Cor do texto */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .social-buttons button:hover {
+    background-color: rgb(192, 7, 115); /* Cor ao passar o mouse */
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 20px; /* Espaçamento entre os links */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links li a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: #ffffff; /* Cor do texto */
+    font-size: 16px; /* Tamanho da fonte */
+  }
+  
+  .footer-links li a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+  }
+
+  

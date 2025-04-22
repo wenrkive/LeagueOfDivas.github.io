@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulário Personalizado para Microsoft Forms</title>
+  <script>
+    function enviarFormulario(event) {
+      event.preventDefault();
+
+      const nome = document.getElementById('nome').value;
+      const nick = document.getElementById('nick').value;
+      const telefone = document.getElementById('telefone').value;
+
+      // Substitua os entry.XXXXX pelos valores corretos do seu Microsoft Forms
+      const url = `https://forms.office.com/Pages/ResponsePage.aspx?id=SUA_ID_DO_FORMS&entry.123456=${encodeURIComponent(nome)}&entry.234567=${encodeURIComponent(nick)}&entry.345678=${encodeURIComponent(telefone)}`;
+
+      window.open(url, '_blank'); // ou use window.location.href = url; se quiser redirecionar
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen ">
+  <form onsubmit="enviarFormulario(event)" class="bg-white p-6 rounded-lg shadow-lg w-80 space-y-4">
+    <h2 class="text-2xl font-semibold text-center text-gray-800">Inscrição</h2>
+
+    <div>
+      <label for="nome" class="block text-gray-700">Nome completo:</label>
+      <input type="text" id="nome" class="w-full mt-1 p-2 border rounded-md" required />
+    </div>
+
+    <div>
+      <label for="nick" class="block text-gray-700">Nickname:</label>
+      <input type="text" id="nick" class="w-full mt-1 p-2 border rounded-md" required />
+    </div>
+
+    <div>
+      <label for="telefone" class="block text-gray-700">Número de telefone:</label>
+      <input type="tel" id="telefone" class="w-full mt-1 p-2 border rounded-md" required />
+    </div>
+
+    <button type="submit" class="w-full bg-pink-600 text-white py-2 rounded-md hover:bg-pink-700">
+      Enviar
+    </button>
+  </form>
+</body>
+</html>

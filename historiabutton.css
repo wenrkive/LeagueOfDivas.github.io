@@ -1,0 +1,15 @@
+/* Adicione este estilo ao seu arquivo styles.css */
+button {
+    display: block; /* Garante que o botão ocupe uma linha inteira */
+    margin: 20px auto; /* Centraliza o botão horizontalmente */
+    background-color: rgb(192, 7, 115); /* Define a cor de fundo */
+    color: #ffffff; /* Define a cor do texto */
+    border: none; /* Remove a borda padrão */
+    padding: 10px 20px; /* Adiciona espaçamento interno */
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+    cursor: pointer; /* Adiciona o cursor de ponteiro ao passar o mouse */
+  }
+  
+  button:hover {
+    background-color: rgb(150, 5, 90); /* Adiciona um efeito de hover */
+  }

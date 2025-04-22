@@ -1,0 +1,141 @@
+.container {
+  margin-top: 40px; /* Espaçamento superior */
+  margin-bottom: 40px; /* Espaçamento inferior */
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  height: 400px; /* Faz o contêiner ocupar toda a altura da página */
+}
+
+.cards-container {
+  font-size: 8px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+  grid-template-rows: auto; /* Altura automática para as linhas */
+  grid-template-areas: 
+    "card1 card2 card3 card4.."
+    "card5 card6 card7 card8."
+    "card9 card10 card11 card12 card13"; /* Define a disposição dos cards */
+  gap: 15px; /* Espaçamento entre os cards */
+  justify-content: center; /* Centraliza a grade */
+  margin: 20px 0;
+}
+
+.card:nth-child(1) { grid-area: card1; }
+.card:nth-child(2) { grid-area: card2; }
+.card:nth-child(3) { grid-area: card3; }
+.card:nth-child(4) { grid-area: card4; }
+.card:nth-child(5) { grid-area: card5; }
+.card:nth-child(6) { grid-area: card6; }
+.card:nth-child(7) { grid-area: card7; }
+.card:nth-child(8) { grid-area: card8; }
+.card:nth-child(9) { grid-area: card9; }
+.card:nth-child(10) { grid-area: card10; }
+.card:nth-child(11) { grid-area: card11; }
+.card:nth-child(12) { grid-area: card12; }
+.card:nth-child(13) { grid-area: card13; }
+
+.card {
+  width: 100%; /* Ajusta a largura do card para se adaptar à grade */
+  max-width: 150px; /* Define um tamanho máximo para os cards */
+  height: auto; /* Ajusta a altura automaticamente */
+  background-color: #47013c56;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column; /* Organiza o conteúdo em coluna */
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center; /* Centraliza o texto */
+  transition: transform 0.2s, background-color 0.2s;
+  box-sizing: border-box; /* Inclui padding no cálculo do tamanho */
+  padding: 10px; /* Adiciona espaçamento interno */
+}
+
+.card p {
+  font-size: 14px; /* Ajusta o tamanho da fonte */
+  color: #ffffff; /* Cor do texto */
+  line-height: 1.6; /* Espaçamento entre linhas */
+  text-align: justify; /* Justifica o texto */
+  margin: 1px 0; /* Reduz o espaçamento superior e inferior */
+  font-style: italic; /* Aplica o estilo itálico */
+}
+
+.card img {
+  width: 100px; /* Ajusta o tamanho da imagem */
+  height: 100px;
+  object-fit: cover; /* Garante que a imagem se ajuste sem distorção */
+  border-radius: 5px;
+  margin-bottom: 10px; /* Espaçamento entre a imagem e o texto */
+}
+
+.card:hover {
+  background-color: rgb(192, 7, 115);
+  transform: scale(1.05);
+}
+
+#content-area h1 {
+  font-size: 24px;
+  color: rgb(192, 7, 115); /* Cor do título */
+  text-align: center;
+  margin-bottom: 15px;
+  
+}
+
+a {
+  color: orange; /* Define a cor laranja para os links */
+  text-decoration: none; /* Remove o sublinhado padrão */
+  transition: color 0.3s ease; /* Adiciona uma transição suave */
+}
+
+a:hover {
+  color: black; /* Muda a cor para preto ao passar o mouse */
+  text-decoration: underline; /* Opcional: adiciona sublinhado ao hover */
+}
+
+#content-area p {
+  font-style: italic;
+  margin-top: 40px;
+  color: #ffffff; /* Cor do texto */
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center; /* Justifica o texto */
+  margin-bottom: 10px;
+  padding: 0;
+  max-width: 600px;
+  width: 100%;
+  height: auto; /* Ensure it can expand based on content */
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas no mobile */
+    gap: 10px; /* Reduz o espaçamento entre os cards */
+  }
+
+  .card {
+    max-width: 120px; /* Reduz o tamanho máximo dos cards */
+    height: 100px; /* Ajusta a altura dos cards */
+  }
+
+  .card img {
+    width: 80px; /* Reduz o tamanho da imagem */
+    height: 80px;
+  }
+
+  .card p {
+    font-size: 14px; /* Reduz o tamanho do texto */
+  }
+}
+
+@media (max-width: 480px) {
+  .cards-container {
+    grid-template-columns: 1fr; /* 1 coluna no mobile menor */
+  }
+
+  .card {
+    max-width: 100%; /* Cards ocupam toda a largura */
+    height: auto; /* Altura ajustável */
+  }
+}

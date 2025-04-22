@@ -1,0 +1,88 @@
+/* Estilo para o container dos botões */
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center; /* Centraliza os botões horizontalmente */
+  align-items: center; /* Centraliza os botões verticalmente */
+  gap: 20px; /* Espaçamento entre os botões */
+}
+
+/* Estilo para os botões redondos (Discord e WhatsApp) */
+.instagram-btn , .tiktok-btn {
+  background: black; /* Cor de fundo inicial */
+  color: white; /* Cor do texto */
+  border: none;
+  padding: 15px; /* Padding para um círculo mais uniforme */
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50%; /* Torna o botão redondo */
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease; /* Transição suave */
+  box-shadow: 0 0 10px #ff00803f, 0 0 20px #cf689b, 0 0 30px #ff007f; /* Efeito neon */
+  width: 45px; /* Largura fixa para garantir que seja um círculo */
+  height: 45px; /* Altura fixa para garantir que seja um círculo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+/* Efeito de preenchimento transversal ao passar o mouse */
+.instagram-btn::before, .tiktok-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%; /* Começa fora do botão */
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(226, 121, 173, 0.39), rgba(255, 0, 128, 0.158)); /* Gradiente rosa transparente */
+  transition: left 0.5s ease; /* Transição suave */
+  z-index: 0;
+}
+
+.instagram-btn:hover::before, .tiktok-btn:hover::before {
+  left: 0; /* Preenche o botão ao passar o mouse */
+}
+
+/* Efeito de zoom ao passar o mouse */
+.instagram-btn i, .tiktok-btn:hover {
+  transform: scale(1.1); /* Aumenta o tamanho do botão */
+  box-shadow: 0 0 15px #d473a400, 0 0 30px #ff008000, 0 0 45px #ff008000; /* Brilho neon mais intenso */
+}
+
+/* Efeito de clique */
+.instagram-btn i, .tiktok-btn:active {
+  transform: scale(0.95); /* Reduz o tamanho ao clicar */
+}
+
+/* Ícones dentro dos botões */
+.instagram-btn i, .tiktok-btn i {
+  font-size: 24px; /* Tamanho do ícone */
+  color: white; /* Cor do ícone */
+  z-index: 1; /* Garante que o ícone fique acima do efeito */
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  .buttons {
+    flex-direction: row; /* Mantém os botões um ao lado do outro */
+    gap: 10px; /* Espaçamento entre os botões */
+  }
+}
+
+@media (max-width: 576px) {
+  .buttons {
+    flex-direction: row; /* Mantém os botões um ao lado do outro */
+    gap: 5px; /* Reduz o espaçamento para telas muito pequenas */
+  }
+
+  .discord-btn, .whatsapp-btn {
+    width: 50px; /* Reduz o tamanho dos botões */
+    height: 50px; /* Reduz o tamanho dos botões */
+  }
+
+  .discord-btn i, .whatsapp-btn i {
+    font-size: 20px; /* Reduz o tamanho dos ícones */
+  }
+}

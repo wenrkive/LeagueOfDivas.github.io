@@ -1,0 +1,64 @@
+
+  /* Centraliza o main horizontalmente e faz ocupar toda a largura */
+  main {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    background-color: #47013c85;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 2px solid #4caf4f00;
+    border-radius: 20px;
+  }
+  
+  /* Opcional: centralizar o conteúdo interno também */
+  main section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+/* Centraliza e alinha os itens do menu em uma linha */
+nav {
+  display: flex;
+  justify-content: center; /* Centraliza o menu horizontalmente */
+  align-items: center; /* Centraliza os itens verticalmente */
+  background-color: #47013c85; /* Cor de fundo do menu */
+  padding: 10px 0; /* Espaçamento interno */
+}
+
+nav ul {
+  display: flex; /* Alinha os itens lado a lado */
+  list-style: none; /* Remove os marcadores padrão */
+  padding: 0; /* Remove o espaçamento interno */
+  margin: 0; /* Remove o espaçamento externo */
+}
+
+nav ul li {
+  margin: 0 15px; /* Espaçamento entre os itens */
+}
+
+nav ul li a {
+  text-decoration: none; /* Remove o sublinhado dos links */
+  color: #ffffff; /* Cor do texto */
+  padding: 5px 10px; /* Espaçamento interno dos links */
+  border-radius: 5px; /* Bordas arredondadas */
+  background-color: rgba(192, 7, 115, 0.014); /* Cor de fundo */
+}
+
+nav ul li a:hover {
+  background-color: rgb(150, 5, 90); /* Cor de fundo ao passar o mouse */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  nav ul {
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha, se necessário */
+    justify-content: center; /* Centraliza os itens em telas menores */
+  }
+
+  nav ul li {
+    margin: 10px; /* Ajusta o espaçamento entre os itens no modo responsivo */
+  }
+}

@@ -1,0 +1,37 @@
+/* extras.css */
+.bunny-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .bunny-card img {
+    max-width: 100%;
+    height: auto;
+    width: 150px; /* ajuste conforme desejar */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+   
+  .quemsomos p {
+    font-style: italic;
+  }
+
+  .quemsomos {
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    height: auto; /* Ensure it can expand based on content */
+  }
+  
+  .quemsomos h1 {
+    text-align: center;
+    color: rgb(192, 7, 115);
+  }
+  
+  .quemsomos .section-title {
+    font-weight: bold;
+    margin-top: 20px;
+    color: rgb(192, 7, 115);
+  }
